@@ -20,3 +20,5 @@ Practically, reranking helps by:
 
 Dense retrieval embeddings typically use a **bi-encoder** architecture, while **bge-reranker-large** uses a **cross-encoder** architecture. In general, cross-encoders can outperform bi-encoders for ranking because they jointly encode the *(query, document)* pair and model deeper interaction signals, at the cost of higher compute per candidate.
 
+![RAG](./reranker rag.png)
+
