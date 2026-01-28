@@ -14,7 +14,7 @@ This project implements multiple PDF parsing approaches to maximize **content in
   - bullet lists and their scope,
   - short paragraphs that would otherwise be fragmented by naive splitting.
 
-**Example (as shown in the figure):**
+**Example:**
 A single page is segmented into multiple red-highlighted regions (labeled **1–6**), such as:
 - **(1)** Main section text block (e.g., OEM accessories / installation guidance)
 - **(2)** A warning box (high-salience safety/legal disclaimer)
@@ -29,7 +29,7 @@ Each numbered red box is treated as an individual chunk to preserve the full con
 
 **Problem:** Layout-based blocks can break continuity when content spans pages.
 
-As shown in the figures (**Fig. 1** and **Fig. 2**), the text in highlighted regions can be **continuous across page boundaries**. To address this, we introduce a **sliding-window strategy** over sentence/segment units to preserve cross-page coherence.
+The text can be **continuous across page boundaries**. To address this, we introduce a **sliding-window strategy** over sentence/segment units to preserve cross-page coherence.
 
 **Core idea:**
 1. Convert all PDF text into a single logical sequence (string/segments).
@@ -40,7 +40,7 @@ As shown in the figures (**Fig. 1** and **Fig. 2**), the text in highlighted reg
 
 This overlap ensures we don’t “cut through” critical instructions or multi-step answers, and reduces the chance that retrieval misses the exact span needed for a question.
 
-**Toy example (from the figure):**
+**Toy example:**
 Input segments:
 ```text
 ["aa", "bb", "cc", "dd"]
