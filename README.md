@@ -64,3 +64,15 @@ This document describes an **Intelligent In-Cabin Automotive Knowledge Assistant
 ├── run.py                     # Main entry point
 └── run.sh                     # Main run script
 
+
+
+
+## Running the Code
+
+1. **Run from CLI**
+   ```bash
+   python run.py
+
+2. ** Metric / Score Evaluation**
+   ```bash
+   python test_score.py
