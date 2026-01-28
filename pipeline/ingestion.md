@@ -8,6 +8,9 @@ This project implements multiple PDF parsing approaches to maximize **content in
 
 **Goal:** Parse the PDF **according to page layout and visual blocks**, so each red boxed region becomes a self-contained chunk.
 
+![](./images/image_ZzQCQ4yF1G.png)
+
+
 - We aim to follow the document’s visual structure as closely as possible.
 - **Each highlighted block is treated as one training sample / chunk**, which helps preserve:
   - full warning statements,
@@ -28,6 +31,9 @@ Each numbered red box is treated as an individual chunk to preserve the full con
 ### 3.1.2 Sliding-Window PDF Parsing (Cross-Page Continuity)
 
 **Problem:** Layout-based blocks can break continuity when content spans pages.
+![](./images/image_aAuUHtdAPJ.png)
+
+![](./images/image_WKkhvnKG15.png)
 
 The text can be **continuous across page boundaries**. To address this, we introduce a **sliding-window strategy** over sentence/segment units to preserve cross-page coherence.
 
