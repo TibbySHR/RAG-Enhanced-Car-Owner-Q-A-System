@@ -1,4 +1,4 @@
-## PDF Parsing Strategy
+## Ingestion
 
 This project implements multiple PDF parsing approaches to maximize **content integrity** and minimize **context loss** during downstream retrieval. The key design principle is: **treat each visually coherent block (as highlighted in red) as an atomic sample whenever possible**, so the chunk preserves complete semantics (e.g., a heading + its associated paragraph, or a warning box + its bullet points).
 
